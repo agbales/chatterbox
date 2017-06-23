@@ -1,0 +1,39 @@
+.buddy-bubble, .user-bubble {
+	position: relative;
+	width: 250px;
+	height: 120px;
+	padding: 0px;
+	margin: 50px;
+	padding: 20px;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	background-color: #181818;
+	border-radius: 5px;
+	color: orange;
+}
+
+.buddy-bubble:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 15px 15px;
+	border-color: #181818 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -15px;
+	left: 110px;
+}
+
+.user-bubble:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0px;
+	border-color: #181818 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: 160px;
+	left: 110px;
+}
