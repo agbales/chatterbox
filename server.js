@@ -8,7 +8,7 @@ var io = require('socket.io')(server);
 var staticPath = path.join(__dirname, '/dist');
 app.use(express.static(staticPath));
 
-io.on('connection', function(socket){
+io.sockets.on('connection', function(socket){
   console.log('a user connected @ : ', socket);
   socket.on('message', msg => console.log(msg));
 });
