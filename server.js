@@ -10,5 +10,8 @@ app.use(express.static(staticPath));
 
 io.sockets.on('connection', function(socket){
   console.log('a user connected @ : ', socket);
-  socket.on('message', msg => console.log(msg));
+  socket.on('message', msg => {
+    console.log(msg);
+    socket.broadcast.emit('message', msg);
+  });
 });
